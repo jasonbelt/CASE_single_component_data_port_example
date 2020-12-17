@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="81217863-b3d3-4431-b8a1-f9d90f7b7abd" manual="true">
+    <element uuid="f9bb7ed4-83ae-4dd1-a13a-38404c7d5a76" manual="true">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>proc</seg>
+      </bo>
+      <position x="12.0" y="38.0"/>
+      <size width="88.0" height="35.0"/>
+    </element>
+    <element uuid="cb71c465-0e5a-409c-a446-fbe50f5f3bbb" manual="true">
+      <element uuid="ccd734bb-33f1-463e-a82e-897dcddc5afb" manual="true">
+        <element uuid="3cb683bb-b300-495f-bf31-ef5523acb6da" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>unidirectional</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>read_connection</seg>
+        </bo>
+      </element>
+      <element uuid="1e03a8e8-51b0-4e84-9f2b-77b1539e891a" manual="true">
+        <element uuid="64177ea1-1832-4fde-b28c-75f23813619a" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>unidirectional</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>write_connection</seg>
+        </bo>
+      </element>
+      <element uuid="7efbc2b4-dda1-4a30-a18d-2037c68db768" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>read_port</seg>
+        </bo>
+        <position y="48.0"/>
+      </element>
+      <element uuid="f160b44a-55a5-4bda-8193-1a72b372f002" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>write_port</seg>
+        </bo>
+        <position x="495.0" y="48.0"/>
+      </element>
+      <element uuid="7de90f7c-b23a-4c4f-a80e-daa93e7a063a" manual="true">
+        <element uuid="8ee571c8-8a69-4dec-a0d2-d1de9ad0715b" manual="true" dockArea="left">
+          <bo>
+            <seg>feature</seg>
+            <seg>read_port</seg>
+          </bo>
+          <position y="10.0"/>
+        </element>
+        <element uuid="44c6ee74-fc93-4997-b6cf-00323b140bf3" manual="true" dockArea="right">
+          <bo>
+            <seg>feature</seg>
+            <seg>write_port</seg>
+          </bo>
+          <position x="314.0" y="10.0"/>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>source_thread_component</seg>
+        </bo>
+        <position x="89.0" y="38.0"/>
+        <size width="394.0" height="60.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>source_process_component</seg>
+      </bo>
+      <position x="12.0" y="93.0"/>
+      <size width="575.0" height="110.0"/>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>top.impl</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="599.0" height="215.0"/>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>test_data_port_periodic_domains::top.impl</seg>
+    </context>
+  </config>
+</diagram:Diagram>

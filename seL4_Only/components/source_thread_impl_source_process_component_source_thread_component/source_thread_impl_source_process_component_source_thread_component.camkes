@@ -1,0 +1,6 @@
+component source_thread_impl_source_process_component_source_thread_component {
+  include <sb_types.h>;
+  control;
+  emits TickTock sb_self_pacer_tick;
+  consumes TickTock sb_self_pacer_tock;
+}

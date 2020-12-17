@@ -1,0 +1,7 @@
+/.aadlbin-gen/
+instances
+**/src/c/nix
+instances/
+**/*-build/
+**/CAmkES/slang_libraries/
+**/sel4-build/

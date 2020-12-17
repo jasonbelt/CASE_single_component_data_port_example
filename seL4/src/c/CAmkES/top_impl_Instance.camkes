@@ -1,0 +1,18 @@
+// This file will be regenerated, do not edit
+
+import <std_connector.camkes>;
+import "components/source_thread_impl_source_process_component_source_thread_component/source_thread_impl_source_process_component_source_thread_component.camkes";
+
+assembly {
+  composition {
+    component source_thread_impl_source_process_component_source_thread_component source_process_component_source_thread_component;
+
+    connection seL4Notification conn1(from source_process_component_source_thread_component.sb_self_pacer_tick, to source_process_component_source_thread_component.sb_self_pacer_tock);
+  }
+
+  configuration {
+    source_process_component_source_thread_component._stack_size = 61440;
+    source_process_component_source_thread_component._domain = 2;
+
+  }
+}
