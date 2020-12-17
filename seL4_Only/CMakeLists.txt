@@ -16,7 +16,7 @@ endif()
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/types)
 
 DeclareCAmkESComponent(source_thread_impl_source_process_component_source_thread_component
-  SOURCES components/source_thread_impl_source_process_component_source_thread_component//src/source.c components/source_thread_impl_source_process_component_source_thread_component/src/sb_source_thread_impl.c
+  SOURCES components/source_thread_impl_source_process_component_source_thread_component//src/source.c components/source_thread_impl_source_process_component_source_thread_component/src/sb_source_thread_impl.c types/src/sp_int8_t.c
   INCLUDES components/source_thread_impl_source_process_component_source_thread_component/includes/ types/includes
 )
 

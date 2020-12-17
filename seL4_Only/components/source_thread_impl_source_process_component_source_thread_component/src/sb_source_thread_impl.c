@@ -8,6 +8,12 @@ void sb_entrypoint_period_source_thread_impl(int64_t *in_arg) {
   test_data_port_periodic_domains_source_component_time_triggered((int64_t *) in_arg);
 }
 
+seqNum_t sb_write_port_seqNum;
+
+bool sb_write_port_write(const int8_t * value) {
+  return write_sp_int8_t(sb_write_port, value, &sb_write_port_seqNum);
+}
+
 /************************************************************************
  *  sb_entrypoint_source_thread_impl_source_process_component_source_thread_component_initializer:
  *
@@ -18,6 +24,13 @@ void sb_entrypoint_period_source_thread_impl(int64_t *in_arg) {
  ************************************************************************/
 void sb_entrypoint_source_thread_impl_source_process_component_source_thread_component_initializer(const int64_t * in_arg) {
   test_data_port_periodic_domains_source_component_init((int64_t *) in_arg);
+}
+
+void pre_init(void) {
+  // initialise data structure for data port write_port
+  printf("before\n");
+  init_sp_int8_t(sb_write_port, &sb_write_port_seqNum);
+  printf("after\n");
 }
 
 /************************************************************************

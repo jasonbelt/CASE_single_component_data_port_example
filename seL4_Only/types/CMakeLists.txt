@@ -16,15 +16,13 @@ elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
 endif()
 
 add_library(SB_Type_Library
-            INTERFACE
-            )
+            src/sp_int8_t.c)
 
 # Assume that if the muslc target exists then this project is in an seL4 native
 # component build environment, otherwise it is in a linux userlevel environment.
 # In the linux userlevel environment, the C library will be linked automatically.
 if(TARGET muslc)
   target_link_libraries(SB_Type_Library
-                        INTERFACE
                         muslc)
 endif()
 
@@ -32,10 +30,8 @@ add_definitions(-DCAMKES)
 
 if(TARGET SlangTypeLibrary)
   target_link_libraries(SB_Type_Library
-                        INTERFACE
                         SlangTypeLibrary)
 endif()
 
 target_include_directories(SB_Type_Library
-                           INTERFACE
-                           includes)
+                           PUBLIC includes)
